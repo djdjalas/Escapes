@@ -21,7 +21,7 @@ import java.util.List;
 import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.assertThat;
 
-@SpringBootTest(classes = SecretScapesApp.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@SpringBootTest(classes = SecretEscapesApp.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @ContextConfiguration
 @DirtiesContext(methodMode = DirtiesContext.MethodMode.BEFORE_METHOD)
 @RunWith(SpringRunner.class)
