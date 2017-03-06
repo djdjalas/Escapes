@@ -1,0 +1,27 @@
+<form id = "form" class="form-horizontal">
+    <fieldset>
+        <legend>Payments</legend>
+
+        <div class="form-group">
+            <div class="col-lg-6">
+                <h1>From</h1>
+                <select ng-init = "from" ng-model = "from" class="form-control">
+                    <option value="{{ account.email.emailAddress }}" ng-repeat = "account in accounts">{{ account.accountHolder.name }} - {{ account.email.emailAddress }} - {{ account.balance }} </option>
+                </select>
+                <br>
+                <h1>To</h1>
+                <select ng-model = "to" class="form-control">
+                    <option value="{{ account.email.emailAddress }}" ng-repeat = "account in accounts">{{ account.accountHolder.name }} - {{ account.email.emailAddress }} - {{ account.balance }} </option>
+                </select>
+                <br>
+                <input ng-model ="amount" type="text" class="form-control" placeholder="Amount">
+                <br>
+                <div class="col-lg-10">
+                    <button type="reset" class="btn btn-default">Cancel</button>
+                    <button ng-click = "pay(from, to, amount)" class="btn btn-primary">pay</button>
+                </div>
+            </div>
+        </div>
+        {{from}} {{to}} {{amount}}
+    </fieldset>
+</form>

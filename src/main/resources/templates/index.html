@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html ng-app = "app" xmlns:th="http://www.thymeleaf.org">
+<link>
+    <title>Scapes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://bootswatch.com/flatly/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/json-formatter/0.6.0/json-formatter.css" />
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <style>
+        body{
+          padding-top: 70px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Escapes</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#" ui-sref="accounts" ui-sref-active="active">Accounts</a></li>
+                    <li><a href="#" ui-sref="payments" ui-sref-active="active">Payments</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <h>Welcome to Secret Escapes challenge</h>
+
+        <h2>Integration tests available. Please run IntegrationTest.java</h2>
+
+        <ui-view></ui-view>
+    </div>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/json-formatter/0.6.0/json-formatter.js"></script>
+    <script src="/main.js"></script>
+
+</body>
+</html>
