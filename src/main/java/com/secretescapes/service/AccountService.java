@@ -1,6 +1,7 @@
 package com.secretescapes.service;
 
 import com.secretescapes.dao.AccountsDAO;
+import com.secretescapes.dao.AccountsDAOImpl;
 import com.secretescapes.entitiy.Account;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,7 +18,7 @@ public class AccountService {
     }
 
     @Autowired
-    public AccountService(AccountsDAO accountsDAO) {
+    public AccountService(AccountsDAOImpl accountsDAO) {
         this.accountsDAO = accountsDAO;
     }
 }

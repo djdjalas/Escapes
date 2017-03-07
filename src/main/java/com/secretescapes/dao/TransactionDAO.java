@@ -1,32 +1,14 @@
 package com.secretescapes.dao;
 
-import com.secretescapes.entitiy.*;
-import org.springframework.stereotype.Repository;
+import com.secretescapes.entitiy.Transaction;
 
-import java.util.ArrayList;
 import java.util.Collection;
 
+/**
+ * Created by DjAlas on 07/03/2017.
+ */
+public interface TransactionDAO {
+    void recordTransaction(Transaction payment);
 
-@Repository
-public class TransactionDAO {
-
-    private static Collection<Transaction> transactions;
-
-    static {
-        transactions = new ArrayList<>();
-        transactions.add(new Transaction(new Payment(
-                new Account("Current", new User("Anna", "Smith"), new Email(null, "smith@gmail.com")),
-                new Account("Current", new User("Alex", "Song"), new Email(null, "song@gmail.com")),
-                80000.00
-
-        )));
-    }
-
-    public void recordTransaction(Transaction payment) {
-        transactions.add(payment);
-    }
-
-    public Collection<Transaction> getAllTransactions() {
-        return transactions;
-    }
+    Collection<Transaction> getAllTransactions();
 }
